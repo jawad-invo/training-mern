@@ -17,21 +17,47 @@
             alert(document.cookie);
         }
 
-        function redirect(){
+        function redirect() {
             window.location = "https://www.google.com.pk";
-
         }
+
+        function autoReload() {
+            window.location.reload();
+        }
+
+        function try_catch() {
+            const message = "This is example"
+            message.innerHTML = "";
+            let x = "";
+            try {
+                if (x == "") throw "empty";
+                if (isNaN(x)) throw "not a number";
+            }
+            catch (err) {
+                 alert("Input is " + err);
+            }
+            finally {
+                alert("Finally block!");
+            }
+        }
+
     </script>
 
     <button onclick="myFunction()">Type of</button><br>
 
-    <button onkeydown="myFunction()">On Key down Here</button><br>
+    <button onkeydown="myFunction()">On Key down event</button><br>
 
     <button onclick="saveCookie()">Save Cookies</button><br>
 
     <button onclick="getCookies()">Get Cookies</button><br>
 
-    <button onclick="redirect()">Redirect to another page</button>
+    <button onclick="redirect()">Redirect to another page</button><br>
+
+    <button onclick="autoReload()">Auto Reload Page</button><br>
+
+    <button onclick="try_catch()">Try Catch Finally Block</button><br>
+
+
 
 
 </body>
