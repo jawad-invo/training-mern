@@ -1,0 +1,33 @@
+<html>
+
+<body>
+    <script>
+        function myFunction() {
+            res = alert(typeof (-0.1));
+        }
+
+        function saveCookie() {
+            function setCookie(cname, cvalue, exdays) {
+                const d = new Date();
+                d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+                let expires = "expires=" + d.toUTCString();
+                document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+            }
+        }
+
+        function getCookies() {
+            alert(document.cookie);
+        }
+    </script>
+
+    <button onclick="myFunction()">Type of</button>
+
+    <button onkeydown="myFunction()">On Key down Here</button>
+
+    <button onclick="saveCookie()">Save Cookies</button>
+
+    <button onclick="getCookies()">Get Cookies</button>
+
+</body>
+
+</html>
