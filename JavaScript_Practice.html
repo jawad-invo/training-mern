@@ -7,26 +7,32 @@
         }
 
         function saveCookie() {
-            function setCookie(cname, cvalue, exdays) {
-                const d = new Date();
-                d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-                let expires = "expires=" + d.toUTCString();
-                document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-            }
+            const d = new Date();
+            d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+            let expires = "expires=" + d.toUTCString();
+            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
         }
 
         function getCookies() {
             alert(document.cookie);
         }
+
+        function redirect(){
+            window.location = "https://www.google.com.pk";
+
+        }
     </script>
 
-    <button onclick="myFunction()">Type of</button>
+    <button onclick="myFunction()">Type of</button><br>
 
-    <button onkeydown="myFunction()">On Key down Here</button>
+    <button onkeydown="myFunction()">On Key down Here</button><br>
 
-    <button onclick="saveCookie()">Save Cookies</button>
+    <button onclick="saveCookie()">Save Cookies</button><br>
 
-    <button onclick="getCookies()">Get Cookies</button>
+    <button onclick="getCookies()">Get Cookies</button><br>
+
+    <button onclick="redirect()">Redirect to another page</button>
+
 
 </body>
 
